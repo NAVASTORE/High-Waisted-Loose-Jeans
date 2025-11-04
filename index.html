@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High Waisted Loose Jeans - SimpleTech</title>
+    <meta name="description" content="Jeans high-waist dengan cutting loose yang nyaman dan stylish. Pinggang tinggi bantu bikin siluet terlihat lebih ramping, sementara model loose memberi ruang gerak yang lega.">
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#E4CCBF',
+                        secondary: '#80792D',
+                        accent: '#814F16',
+                        dark: '#683506',
+                        light: '#ffffff'
+                    },
+                    fontFamily: {
+                        heading: ['Poppins', 'sans-serif'],
+                        body: ['Roboto', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Critical CSS */
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(228, 204, 191, 0.9) 0%, rgba(128, 121, 45, 0.8) 50%, rgba(104, 53, 6, 0.7) 100%);
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .social-proof-popup {
+            transform: translateX(100%);
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .social-proof-popup.show {
+            transform: translateX(0);
+        }
+    </style>
+</head>
+<body class="font-body bg-light text-dark">
+    <!-- Navigation Component -->
+    <custom-navigation></custom-navigation>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://pic.compgoo.com/bf3c65/8f9819e566afb00555c456d31b881e64.jpg?_t=1762253663&_s=4064badc5e9c4a5ba381b7e528dca7a0&_token=65d9d620cbfbde02984c4919c1c5168f&_e=10&_c=70bcb8a1d89b760c6f4213d7e71753a8" 
+                 alt="High Waisted Loose Jeans" 
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 hero-gradient"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
+            <h1 class="font-heading text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+                High Waisted<br>
+                <span class="text-primary">Loose Jeans</span>
+            </h1>
+            
+            <p class="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto">
+                Jeans high-waist dengan cutting loose yang nyaman dan stylish. 
+                Siluet ramping, gerak bebas, gaya timeless.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+                <div class="flex items-center gap-3">
+                    <span class="text-2xl line-through text-white/70">Rp 370.802</span>
+                    <span class="text-3xl font-bold text-primary">Rp 185.358</span>
+                </div>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button onclick="scrollToOrder()" class="bg-accent hover:bg-dark text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-2xl">
+                    <span class="flex items-center gap-2">
+                        <i data-feather="shopping-bag"></i>
+                        Pesan Sekarang
+                    </span>
+                </button>
+                
+                <button onclick="scrollToGallery()" class="glass-effect hover:bg-white/20 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300">
+                    Lihat Detail
+                </button>
+            </div>
+            
+            <!-- Trust Badges -->
+            <div class="flex flex-wrap justify-center gap-6 mt-12">
+                <div class="flex items-center gap-2 text-white">
+                    <i data-feather="shield"></i>
+                    <span>Garansi 7 Hari</span>
+                </div>
+                <div class="flex items-center gap-2 text-white">
+                    <i data-feather="truck"></i>
+                    <span>Gratis Ongkir</span>
+                </div>
+                <div class="flex items-center gap-2 text-white">
+                    <i data-feather="rotate-ccw"></i>
+                    <span>Return 7 Hari</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i data-feather="chevron-down" class="text-white w-8 h-8"></i>
+        </div>
+    </section>
+
+    <!-- Product Gallery Section -->
+    <section id="gallery" class="py-20 bg-light">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-4xl md:text-5xl font-bold mb-6">
+                <span class="text-accent">Style</span> Gallery
+                </h2>
+                <p class="text-xl text-dark/70 max-w-2xl mx-auto">
+                    Lihat bagaimana High Waisted Loose Jeans bisa membuat penampilan Anda 
+                    lebih stylish dan percaya diri
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Video 1 -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-2xl">
+                    <video class="w-full transition-transform duration-500 group-hover:scale-105" 
+                         autoplay muted loop playsinline>
+                        <source src="https://static.compgoo.com/32e2f0/9418ae0bc78c8995ddcc1a606bc40bdb.mp4" type="video/mp4">
+                    </video>
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                
+                <!-- Video 2 -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-2xl">
+                    <video class="w-full transition-transform duration-500 group-hover:scale-105" 
+                         autoplay muted loop playsinline>
+                        <source src="https://static.compgoo.com/37bfb/b9b0de84c4396e31f28bbe1c3ac01490.mp4" type="video/mp4">
+                    </video>
+                </div>
+                
+                <!-- Video 3 -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-2xl">
+                    <video class="w-full transition-transform duration-500 group-hover:scale-105" 
+                         autoplay muted loop playsinline>
+                        <source src="https://static.compgoo.com/6079e/2971b33af0050ce55bb7ebc2a8343b72.mp4" type="video/mp4">
+                    </video>
+                </div>
+                
+                <!-- Image 1 -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-2xl">
+                    <img src="https://static.compgoo.com/7f6d2/18aa0d110f2b9c09f1a19c12c29babab.640x1000.jpg" 
+                         alt="High Waisted Loose Jeans Front View" 
+                         class="w-full transition-transform duration-500 group-hover:scale-105">
+                </div>
+                
+                <!-- Image 2 -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-2xl">
+                    <img src="https://static.compgoo.com/cb966/77de6dfcc505ad49040eadda8ffabaf2.640x1000.jpg" 
+                         alt="High Waisted Loose Jeans Side View" 
+                         class="w-full transition-transform duration-500 group-hover:scale-105">
+                </div>
+                <!-- Image 3 -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-2xl">
+                    <img src="https://static.compgoo.com/b3b0eb/5b9b51607306f9d83ecfffb4aba3f975.640x1000.jpg" 
+                         alt="High Waisted Loose Jeans Back View" 
+                         class="w-full transition-transform duration-500 group-hover:scale-105">
+                </div>
+                
+                <!-- Additional Image 1 -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-2xl">
+                    <img src="https://pic.compgoo.com/6c03df/c125e5162e108d8aa9684a0073b87acd.jpg?_t=1762253663&_s=59f4e4e66c090616e23f9a740379270f&_token=65d9d620cbfbde02984c4919c1c5168f&_e=10&_c=6a48b95d10acad8f64266f07227938b4" 
+                         alt="High Waisted Loose Jeans Style 1" 
+                         class="w-full transition-transform duration-500 group-hover:scale-105">
+                </div>
+                
+                <!-- Additional Image 2 -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-2xl">
+                    <img src="https://pic.compgoo.com/6e7a6b/5bc5048346980afabe301a73ac5dd94b.jpg?_t=1762253663&_s=d3080c5e2068ab2de4578dcd92f7ae1c&_token=65d9d620cbfbde02984c4919c1c5168f&_e=10&_c=f39ce25bba1518223fa1d6c69d6a7bb9" 
+                         alt="High Waisted Loose Jeans Style 2" 
+                         class="w-full transition-transform duration-500 group-hover:scale-105">
+                </div>
+            </div>
+</div>
+</section>
+
+    <!-- Benefits Section -->
+    <section class="py-20 bg-primary/10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-4xl md:text-5xl font-bold mb-6">
+                    Kenapa Harus <span class="text-accent">High Waisted Loose Jeans</span>?
+                </h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center p-6 rounded-2xl bg-white shadow-xl hover:shadow-2xl transition-all duration-300">
+                    <div class="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="user" class="text-white w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-semibold mb-3">Siluet Ramping</h3>
+                    <p class="text-dark/70">
+                        Pinggang tinggi membantu membentuk siluet yang lebih ramping dan proporsional
+                    </p>
+                </div>
+                
+                <div class="text-center p-6 rounded-2xl bg-white shadow-xl hover:shadow-2xl transition-all duration-300">
+                    <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="move" class="text-white w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-semibold mb-3">Gerak Bebas</h3>
+                    <p class="text-dark/70">
+                        Model loose memberikan ruang gerak yang lega dan nyaman sepanjang hari
+                    </p>
+                </div>
+                
+                <div class="text-center p-6 rounded-2xl bg-white shadow-xl hover:shadow-2xl transition-all duration-300">
+                    <div class="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="feather" class="text-white w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-semibold mb-3">Bahan Premium</h3>
+                    <p class="text-dark/70">
+                        Denim tebal namun tetap lentur dan fleksibel untuk kenyamanan maksimal
+                    </p>
+                </div>
+                
+                <div class="text-center p-6 rounded-2xl bg-white shadow-xl hover:shadow-2xl transition-all duration-300">
+                    <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="star" class="text-white w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-semibold mb-3">Style Timeless</h3>
+                    <p class="text-dark/70">
+                        Look clean dan modern yang mudah dipadukan dengan berbagai outfit
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing & Order Section -->
+    <section id="order" class="py-20 bg-dark text-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="font-heading text-4xl md:text-5xl font-bold mb-6">
+                        Dapatkan <span class="text-primary">Diskon 50%</span><br>
+                        Hari Ini Saja!
+                    </h2>
+                    
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center gap-3">
+                            <i data-feather="check" class="text-primary"></i>
+                            <span>Harga Normal: <span class="line-through">Rp 370.802</span></span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i data-feather="check" class="text-primary"></i>
+                            <span class="text-2xl font-bold text-primary">Rp 185.358</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i data-feather="check" class="text-primary"></i>
+                            <span>Gratis Ongkir Seluruh Indonesia</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i data-feather="check" class="text-primary"></i>
+                            <span>Garansi 7 Hari</span>
+                        </div>
+                    </div>
+                    <!-- Countdown Timer -->
+                    <div class="bg-accent/20 rounded-2xl p-6 mb-8">
+                        <h3 class="font-heading text-xl font-semibold mb-4 text-center">
+                        Promo Berakhir Dalam:
+                        </h3>
+                        <div class="grid grid-cols-3 gap-4 text-center">
+                            <div class="countdown-item bg-dark/50 rounded-xl p-4">
+                            <div class="text-2xl font-bold" id="countdown-hours">00</div>
+                            <div class="text-sm">Jam</div>
+                        </div>
+                        <div class="countdown-item bg-dark/50 rounded-xl p-4">
+                            <div class="text-2xl font-bold" id="countdown-minutes">59</div>
+                            <div class="text-sm">Menit</div>
+                        </div>
+                        <div class="countdown-item bg-dark/50 rounded-xl p-4">
+                            <div class="text-2xl font-bold" id="countdown-seconds">59</div>
+                            <div class="text-sm">Detik</div>
+                        </div>
+                    </div>
+</div>
+                
+                <!-- OrderOnline Form -->
+                <div class="bg-white/10 backdrop-blur-lg rounded-3xl p-8 glass-effect">
+                    <h3 class="font-heading text-2xl font-bold mb-6 text-center text-primary">
+                        Form Pemesanan
+                    </h3>
+                    
+                    <!-- OrderOnline Embed Code -->
+                    <div class="ooef">
+                        <form class="orderonline-embed-form" 
+                              data-username="nava" 
+                              data-product-slug="high-waisted-loose-jeans" 
+                              data-product-id="690a3fcc0796c911d00c97c7" 
+                              id="oo-embed-form-high-waisted-loose-jeans-9880" 
+                              data-origin="orderonline">
+                            <div class="ooef-loader">
+                                <style>
+                                    .ooef-loader{visibility: hidden;opacity: 0;position: absolute;left: 0;right: 0;top: 0;bottom: 0;display: flex;justify-content: center;align-items: center;flex-direction: column;animation: ooLoadingIn 10s ease;-webkit-animation: ooLoadingIn 10s ease;animation-fill-mode: forwards;overflow: hidden}
+                                    @keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}
+                                    @-webkit-keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}
+                                    .ooef-loader>div,.ooef-loader>div:after{border-radius: 50%;width: 2.5rem;height: 2.5rem}
+                                    .ooef-loader>div{font-size: 10px;position: relative;text-indent: -9999em;border: .25rem solid #f5f5f5;border-left: .25rem solid #55c4cf;-webkit-transform: translateZ(0);-ms-transform: translateZ(0);transform: translateZ(0);-webkit-animation: ooLoading 1.1s infinite linear;animation: ooLoading 1.1s infinite linear}
+                                    .ooef-loader.error>div{border-left: .25rem solid #ff4500;animation-duration: 5s}
+                                    @-webkit-keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}
+                                    @keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}
+                                </style>
+                                <div aria-live="polite" role="status">
+                                    <div>Loading...</div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Popup Container -->
+    <div id="socialProofContainer" class="fixed top-6 right-6 z-50 space-y-4"></div>
+
+    <!-- Footer Component -->
+    <custom-footer></custom-footer>
+
+    <!-- Sticky CTA Button -->
+    <div class="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-40">
+        <button onclick="scrollToOrder()" class="bg-accent hover:bg-dark text-white px-8 py-4 rounded-full font-semibold shadow-2xl transition-all duration-300 transform hover:scale-105">
+            <span class="flex items-center gap-2">
+                <i data-feather="shopping-bag"></i>
+                Pesan Sekarang - Rp 185.358
+            </span>
+        </button>
+    </div>
+
+    <!-- Component Scripts -->
+    <script src="components/navigation.js"></script>
+    <script src="components/footer.js"></script>
+    
+    <!-- Main Script -->
+    <script src="script.js"></script>
+    
+    <!-- Feather Icons -->
+    <script>
+        feather.replace();
+    </script>
+    
+    <!-- OrderOnline Script -->
+    <script>
+        if (typeof xLogError != 'function') {
+            var xLogError = function (error) {
+                var req = new XMLHttpRequest();
+                var payload = JSON.stringify({ url: document.location.href, line: error.line, stack: error.stack });
+                var params = 'message=' + encodeURIComponent(error.name) + '&payload=' + encodeURIComponent(payload) + '&type=embed&level=error';
+                req.open('POST', 'https://api.orderonline.id/log', true);
+                req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+                req.send(params);
+            };
+        }
+        
+        try {
+            if (typeof xEmbedScript != 'function') {
+                var xEmbedScript = function () {
+                    !function(w, d, e, v, id, t, s) {
+                        if (d.getElementById(id)) return;
+                        t = d.createElement(e);t.async = !0;t.src = v;t.id = id;
+                        s = d.getElementsByTagName(e)[0];
+                        s.parentNode.insertBefore(t, s);
+                    }(window, document, 'script', 'https://cdn.orderonline.id/js/embed-v2-slim.min.js?v=8.0.4', 'oo-embed-js');
+                };
+            }
+            
+            if (typeof xEmbedInit != 'function') {
+                var xEmbedInit = function (w, n) {
+                        if (w.ooe) return;
+                        n = w.ooe = function() {
+                            n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                        };
+                        if (!w._ooe) w._ooe = n;
+                        n.push = n;n.loaded = !0;n.version = '8.0.4';n.queue = [];
+                    };
+                }
+                
+                xEmbedInit(window);
+                ooe('setup', 'redirect', 'https://nava.orderonline.id');
+                ooe('init', '5f119cd08dcbdb2737678706', '690a3fcc0796c911d00c97c7', '690a3fcc0796c911d00c97c8', 'oo-embed-form-high-waisted-loose-jeans-9880', {
+                    "mode":"page",
+                    "action":"Klik untuk pemesanan",
+                    "title":"Form Pemesanan",
+                    "triggerPixel":true,
+                    "triggerGtm":true
+                });
+                
+                if (!window.jQuery) {
+                    !function(w, d, e, v, id, t, s) {
+                            if (d.getElementById(id)) return;
+                            t = d.createElement(e);t.async = !0;t.src = v;t.id = id;
+                            t.addEventListener('load', xEmbedScript);
+                            s = d.getElementsByTagName(e)[0];
+                            s.parentNode.insertBefore(t, s);
+                        }(window, document, 'script', 'https://cdn.orderonline.id/js/vendor/jquery.min.js', 'oo-embed-jquery');
+                } else {
+                    xEmbedScript();
+                }
+            } catch (e) {
+                xLogError(e);
+                throw e;
+            }
+        </script>
+    <script src="https://huggingface.co/deepsite/deepsite-badge.js"></script>
+</body>
+    </html>
